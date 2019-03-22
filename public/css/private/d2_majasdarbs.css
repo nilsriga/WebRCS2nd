@@ -1,0 +1,39 @@
+div {
+    background-color: green;
+}
+
+p:first-of-type {
+    background-color: greenyellow;
+}
+
+.red-p {
+    background-color: red;
+}
+
+p.red-p + p {
+    background-color: green;
+}
+
+.blue-p {
+    background-color: blue;
+}
+
+.blue-p > span {
+    background-color: yellow;
+}
+
+strong > span {
+    background-color: pink;
+}
+
+p:nth-child(6) {
+    background-color: green;
+}
+
+[data-foo] {
+    background-color: violet;
+}
+
+.super-strange-paragraph:hover > span {
+    background-color: red;
+}
