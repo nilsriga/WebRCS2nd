@@ -16,16 +16,21 @@ body {
     }
 }
 
-
 /* homepage */
 
 #home-articles-title {
     text-align: left;
 }
 
+.card.small {
+    height: 200px !important;
+    width: auto
+}
+
 /* start of Materialize slider */
 
-#prev, #next {
+#prev,
+#next {
     float: left;
     margin-top: 200px;
     cursor: pointer;
@@ -59,7 +64,6 @@ body {
     position: relative;
     overflow: hidden;
     float: left;
-    border: blanchedalmond solid 1px;
 }
 
 .slider-inner img {
@@ -99,8 +103,8 @@ body {
 /* chat */
 
 .chat-window {
-    height: 300px;
-    width: 500px;
+    min-height: 500px;
+    min-width: auto;
 }
 
 .messages {
@@ -114,8 +118,8 @@ body {
 .chat-container {
     background: white;
     padding: 20px 25px;
-    border: 5px solid #e57373 ;
-    width: 550px;
+    border: 5px solid #e57373;
+    width: auto;
     height: auto;
     box-sizing: border-box;
     position: relative;
@@ -129,7 +133,7 @@ body {
 .register-container {
     background: white;
     padding: 20px 25px;
-    border: 5px solid #f44336 ;
+    border: 5px solid #f44336;
     width: 550px;
     height: auto;
     box-sizing: border-box;
@@ -157,6 +161,32 @@ body {
 #clicker-box {
     padding: 5px;
     border-radius: 10px;
-    }
+}
 
 /* end of clicker */
+
+
+
+/* start of articles page */
+
+.gallery-image {
+    max-width: 270px;
+}
+
+.small-gallery-image {
+    width: 100%;
+    max-width: 275px;
+    height: inherit;
+}
+
+/* end of articles page */
+
+
+/* start of about us*/
+
+.tab-image>img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* end of about us */

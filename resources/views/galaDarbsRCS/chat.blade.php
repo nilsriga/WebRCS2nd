@@ -6,11 +6,10 @@
 
 @include('galaDarbsRCS/breadcrumbs')
 
-<p>Hello Chief from home for Chat blade</p>
-
+<br>
 <div class="container">
-    <div class="row chat-container animated-container">
-        <div class="chat-window">
+    <div class="row chat-container animated-container z-depth-2">
+        <div class="chat-window z-depth-2">
             <div class="messages">
                 <ul>
                     <li>message</li>
@@ -20,7 +19,7 @@
                 </ul>
             </div>
         </div>
-        <button class=" submit-button waves-effect waves-light red btn right" type="submit">Submit</button>
+        <button class="z-depth-2 submit-button waves-effect waves-light red btn right" type="submit">Submit</button>
     </div>
 </div>
 

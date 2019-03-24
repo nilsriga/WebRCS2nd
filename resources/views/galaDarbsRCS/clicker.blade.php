@@ -6,26 +6,24 @@
 
 @include('galaDarbsRCS/breadcrumbs')
 
-<p>Hello Chief from clicker blade</p>
-
-
 <div class="container animated-container">
+        <h5>VueJs</h5>
     <div class="row">
         <div id="clicker-box" class="col-4 offset-3 red lighten-2">
             <div><h4>Earned Coins:</h4><h5>@{{totalCoins}}</h5></div>
             <div><h6>Avaliable for spending:</h6><p>@{{expendableCoins}}</p></div>
-            <button v-on:click="addClick">Click Me</button>
+            <button class="btn-floating btn-large waves-effect waves-light red" v-on:click="addClick">Click</button>
             <div><p><u>Upgrades:</u></p></div>
             <div>x1 upgrades:</div>
             <span>@{{x1upgradeCount}}</span>
             <span>Current price:</span>
             <span>@{{x1upgradePrice}}</span>
-            <button v-on:click="addx1Upgrade" v-bind:disabled="expendableCoins < x1upgradePrice">Get x1 upgrade</button>
+            <button class="btn" v-on:click="addx1Upgrade" v-bind:disabled="expendableCoins < x1upgradePrice">Get x1 upgrade</button>
             <div>x10 upgrades:</div>
             <span>@{{x10upgradeCount}}</span>
             <span>Current price:</span>
             <span>@{{x10upgradePrice}}</span>
-            <button v-on:click="addx10Upgrade" v-bind:disabled="expendableCoins < x10upgradePrice">Get x10 upgrade</button>
+            <button class="btn" v-on:click="addx10Upgrade" v-bind:disabled="expendableCoins < x10upgradePrice">Get x10 upgrade</button>
         </div>
     </div>
 </div>

@@ -18,7 +18,6 @@
         }
     }
     #calculator {
-        width: inherit;
         padding: 5px;
     }
     .row {
@@ -30,10 +29,9 @@
     }
 </style>
 
-<p>Hello Chief from Calculator blade</p>
-
 
 <div class="container animated-container">
+        <h5>VueJS</h5>
     <div class="row center-align" id="calculator">
             <div id="display" contenteditable="true" class="white p-1 m-1 shadow inner">@{{current || '0'}}</div>     
         <div class="row col-12">

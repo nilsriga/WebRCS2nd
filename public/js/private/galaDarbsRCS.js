@@ -7,32 +7,39 @@ $(".dropdown-trigger").dropdown();
 
 // //______________________________________________________
 // // START OF tab initialization
-var instance = M.Tabs.init();
-console.log(instance);
+$('.tabs').tabs();
 // // END OF tab initialization
 // //______________________________________________________
 
-console.log(document.body.contains(document.getElementsByClassName('slider')));
 
 
 // // START OF Materialize slider
 // //______________________________________________________
-console.log(document.getElementsByClassName('slider'))
-if (document.getElementsByClassName('slider')==true) { 
-document.addEventListener('DOMContentLoaded', function () {
-	var elems = document.querySelectorAll('.slider');
-	var instances = M.Slider.init(elems);
-	console.log(instances[0]);
-	document.getElementById('prev').addEventListener('click', function () {
-		instances[0].prev();
+
+
+if (document.getElementsByClassName('slider')[0]) {
+	document.addEventListener('DOMContentLoaded', function () {
+		var elems = document.querySelectorAll('.slider');
+		var instances = M.Slider.init(elems);
+		document.getElementById('prev').addEventListener('click', function () {
+			instances[0].prev();
+		})
+		document.getElementById('next').addEventListener('click', function () {
+			instances[0].next();
+		})
 	})
-	document.getElementById('next').addEventListener('click', function () {
-		instances[0].next();
-	})
-})};
+};
 
 // // END OF Materialize slider
 // //______________________________________________________
+
+//_________________________________________________________
+// START OF Materialize paralax
+$(document).ready(function () {
+	$('.parallax').parallax();
+});
+// END OF Materialize paralax
+//_________________________________________________________
 
 // //______________________________________________________
 // // START OF jQuery image slider
@@ -81,32 +88,31 @@ function prevImg() {
 
 // //______________________________________________________
 // // START OF vanillaJS image slider
+if (document.getElementsByClassName('vanilla-slider')[0]) {
 
-if(document.getElementsByClassName('vanilla-slider') == true) {
+	var i = 0;
+	var images = [];
+	var time = 3000;
 
-var i = 0;
-var images = [];
-var time = 3000;
+	// add images here
+	images[0] = 'resources/galaDarbsRCS/natureSliderImg1.jpg'
+	images[1] = 'resources/galaDarbsRCS/natureSliderImg2.jpg'
+	images[2] = 'resources/galaDarbsRCS/natureSliderImg3.jpg'
+	images[3] = 'resources/galaDarbsRCS/natureSliderImg4.jpg'
 
-// add images here
-images[0] = 'resources/galaDarbsRCS/natureSliderImg1.jpg'
-images[1] = 'resources/galaDarbsRCS/natureSliderImg2.jpg'
-images[2] = 'resources/galaDarbsRCS/natureSliderImg3.jpg'
-images[3] = 'resources/galaDarbsRCS/natureSliderImg4.jpg'
+	function changeImg() {
+		document.slide.src = images[i];
 
-function changeImg() {
-	document.slide.src = images[i];
-
-	if (i < images.length - 1) {
-		i++;
-	} else {
-		i = 0
-	}
-	setTimeout("changeImg()", time);
-};
-changeImg();
-
+		if (i < images.length - 1) {
+			i++;
+		} else {
+			i = 0
+		}
+		setTimeout("changeImg()", time);
+	};
+	changeImg();
 }
+
 
 // // END OF vanillaJS image slider
 // //______________________________________________________

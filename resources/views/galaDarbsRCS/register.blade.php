@@ -6,8 +6,7 @@
 
 @include('galaDarbsRCS/breadcrumbs')
 
-<p>Hello Chief from home for Register blade</p>
-
+<br>
 <div class="container animated-container">
 <div class="row">
     <div>
