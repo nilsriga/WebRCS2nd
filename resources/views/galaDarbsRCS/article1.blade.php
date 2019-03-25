@@ -9,7 +9,7 @@
 <br>
 <div class="row">
     <div class="col l4 m6">
-        <div class="container">
+        <div class="container ">
             <div class="row">
                 <div class="col l2 ">
                     <a data-fancybox="gallery" href="resources\galaDarbsRCS\natureSliderImg1.jpg"><img class="z-depth-2 gallery-image" src="resources\galaDarbsRCS\natureSliderImg1.jpg" alt=""></a>

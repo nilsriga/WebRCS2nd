@@ -46,6 +46,7 @@ body {
     position: relative;
     /* margin-left: 750px; */
     z-index: 3;
+    float:right;
 }
 
 /* end of Materialize slider */
@@ -191,6 +192,10 @@ body {
 
 /* end of about us */
 
+
+/* Start of pagination */
 .pagination {
     margin-right: 10px;
 }
+
+/* end of pagination */

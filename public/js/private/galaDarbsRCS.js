@@ -120,6 +120,3 @@ if (document.getElementsByClassName('vanilla-slider')[0]) {
 
 // // END OF vanillaJS image slider
 // //______________________________________________________
-
-
-

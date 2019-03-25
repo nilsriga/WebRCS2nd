@@ -48,10 +48,10 @@
 </ul>
 
 <ul class="sidenav" id="mobile-demo">
-    <li><a href="/articles">Home</a></li>
-    <li><a href="badges.html">Articles</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="articles">Articles</a></li>
     <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Js things<i class="material-icons right">arrow_drop_down</i></a></li>
-    <li><a href="/chat">Chat</a></li>
-    <li><a href="/register">Register</a></li>
-    <li><a href="/aboutUs">About Us</a></li>
+    <li><a href="chat">Chat</a></li>
+    <li><a href="register">Register</a></li>
+    <li><a href="aboutUs">About Us</a></li>
 </ul>
