@@ -7,10 +7,11 @@
 @include('galaDarbsRCS/breadcrumbs')
 
 <br>
-<div class="container">
+<div id="app" class="container">
     <div class="row chat-container animated-container z-depth-2">
         <div class="chat-window z-depth-2">
             <div class="messages">
+                <example></example>
                 <ul>
                     <li>message</li>
                     <li>message</li>

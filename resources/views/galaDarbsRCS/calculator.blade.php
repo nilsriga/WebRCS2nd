@@ -30,10 +30,10 @@
 </style>
 
 
-<div class="container animated-container">
+<div class="center-align animated-container">
         <h5>VueJS</h5>
     <div class="row center-align" id="calculator">
-            <div id="display" contenteditable="true" class="white p-1 m-1 shadow inner">@{{current || '0'}}</div>     
+            <div id="display" class="container" contenteditable="true" class="white p-1 m-1 shadow inner">@{{current || '0'}}</div>     
         <div class="row col-12">
             <div  v-on:click="clear" class="col-4 red waves-effect waves-light btn">AC</div>
             <div  v-on:click="action('+')" class="col-4 red waves-effect waves-light btn">+</div>

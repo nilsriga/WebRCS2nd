@@ -64,7 +64,10 @@
 {{-- Private jSs  --}}
 <script src="js/private/galaDarbsRCS.js"></script>
 
-
+{{-- Vue component --}}
+<script src="assets/js/app.js"></script>
+    
+@endcomponent
 
 @yield('clickerScript')
 

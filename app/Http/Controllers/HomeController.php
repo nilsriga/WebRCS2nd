@@ -16,6 +16,14 @@ class HomeController extends Controller
         return view('galaDarbsRCS/articles');
     }
 
+    public function articles2() {
+        return view('galaDarbsRCS/articles2');
+    }
+
+    public function articles3() {
+        return view('galaDarbsRCS/articles3');
+    }
+
     public function article1() {
         return view('galaDarbsRCS/article1');
     }    

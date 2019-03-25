@@ -1,5 +1,9 @@
-// // START OF drop down menu initialization
-$(".dropdown-trigger").dropdown();
+// // START OF menu initialization
+
+$(document).ready(function () {
+	$('.sidenav').sidenav();
+	$(".dropdown-trigger").dropdown();
+});
 
 // // END OF drop down menu initiatialization
 // //______________________________________________________
@@ -116,3 +120,6 @@ if (document.getElementsByClassName('vanilla-slider')[0]) {
 
 // // END OF vanillaJS image slider
 // //______________________________________________________
+
+
+
