@@ -117,6 +117,5 @@ if (document.getElementsByClassName('vanilla-slider')[0]) {
 	changeImg();
 }
 
-
 // // END OF vanillaJS image slider
 // //______________________________________________________

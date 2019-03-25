@@ -49,7 +49,7 @@
 
 {{-- Private js's  --}}
 
-<script src="js/private/clicker.js"></script>
+{{-- <script src="js/private/clicker.js"></script> --}}
 {{-- <script src="js/private/calculator.js"></script> --}}
 {{-- <script src="js/public/d3.js"></script> --}}
 {{-- <script src="js/private/d4.js"></script> --}}

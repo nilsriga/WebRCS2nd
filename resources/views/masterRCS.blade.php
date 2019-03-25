@@ -69,4 +69,6 @@
 
 @yield('calculatorScript')
 
+@yield('messagesScript')
+
 </html>
