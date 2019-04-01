@@ -16,6 +16,10 @@ body {
     }
 }
 
+div.divider {
+    height: 2px;
+}
+
 /* homepage */
 
 #home-articles-title {
@@ -109,7 +113,12 @@ body {
 }
 
 .messages {
+    border-radius:2px;
     margin-left: 10px;
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(59,59,59,1);
+    -moz-box-shadow: inset 0px 0px 10px 0px rgba(59,59,59,1);
+    box-shadow: inset 0px 0px 10px 0px rgba(59,59,59,1);
+    padding: 10px;
 }
 
 .submit-button {
@@ -171,12 +180,12 @@ body {
 /* start of articles page */
 
 .gallery-image {
-    max-width: 270px;
+    max-width: 100%;
 }
 
 .small-gallery-image {
     width: 100%;
-    max-width: 275px;
+    max-width: 100%;
     height: inherit;
 }
 

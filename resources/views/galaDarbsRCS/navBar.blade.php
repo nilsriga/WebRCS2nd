@@ -1,3 +1,13 @@
+@if (Route::has('login'))
+<div class="right-align links">
+    @auth
+        <a href="{{ url('/') }}">Home</a>
+    @else
+        <a href="{{ route('login') }}">Login</a>
+        <a href="{{ route('register') }}">Register</a>
+    @endauth
+</div>
+@endif
 
 <div class="navbar-fixed">
     <nav class="sidenav-trigger">

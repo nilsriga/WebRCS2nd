@@ -1,3 +1,12 @@
+@extends('masterRCS')
+
+@section('title', 'Register')
+
+@section('content')
+
+@include('galaDarbsRCS/breadcrumbs')
+
+<br>
 <div class="container animated-container">
     <div class="card" style="padding:10px;">
         <div>
@@ -68,3 +77,5 @@
         </form>
     </div>
 </div>
+
+@endsection

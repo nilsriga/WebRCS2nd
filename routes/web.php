@@ -11,16 +11,17 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('/articles', 'HomeController@articles');
-Route::get('/articles2', 'HomeController@articles2');
-Route::get('/articles3', 'HomeController@articles3');
-Route::get('/article1', 'HomeController@article1');
-Route::get('/chat', 'HomeController@chat');
-Route::get('/register', 'HomeController@register');
-Route::get('/aboutUs', 'HomeController@aboutUs');
-Route::get('/clicker', 'HomeController@clicker');
-Route::get('/calculator', 'HomeController@calculator');
+Route::get('/', 'ViewController@index');
+Route::get('/articles', 'ViewController@articles');
+Route::get('/articles2', 'ViewController@articles2');
+Route::get('/articles3', 'ViewController@articles3');
+Route::get('/article1', 'ViewController@article1');
+Route::get('/chat', 'ViewController@chat');
+Route::post('/chat', 'ViewController@chatStore');
+Route::get('/register', 'ViewController@register');
+Route::get('/aboutUs', 'ViewController@aboutUs');
+Route::get('/clicker', 'ViewController@clicker');
+Route::get('/calculator', 'ViewController@calculator');
 
 
 // Route::post('/create', 'MessageController@create');
@@ -68,3 +69,21 @@ Route::get('/calculator', 'HomeController@calculator');
 // Route::get('/', function() {
 //     return 'articles page';
 // });
+
+// Authentication Routes...
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// Registration Routes...
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register');
+
+// Password Reset Routes...
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+Route::get('/home', 'HomeController@index')->name('home');
+

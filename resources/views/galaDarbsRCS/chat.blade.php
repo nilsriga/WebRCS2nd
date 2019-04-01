@@ -9,19 +9,35 @@
 <br>
 <div id="app" class="container">
     <div class="row chat-container animated-container z-depth-2">
-        <div class="chat-window z-depth-2">
-            <div class="messages">
+        <div class="chat-window">
+            <div class="messages" style="overflow-y: scroll; height:500px" >
                 <ul>
-                    <li v-for="user in newMessage"><h6>@{{(newMessage.user) ? "User: " + newMessage.user : ""}}</h6></li>
-                    <li v-for="messageText in newMessage"><h6>@{{(newMessage.messageText) ? "Writes: " + newMessage.messageText : ""}}</h6></li>
+
+                    @foreach($messages as $message)
+
+                    <li><h5>{{$message->title}}</h5></li>
+                    <ul>
+                        <li><h6>{{$message->content}}</h6></li>
+                        {{-- <li>{{$message->$created_at}}</li> --}}
+                        <li><p>{{$message->created_at}}</p></li>
+                    </ul>
+                    <div class="divider"></div>
+
+
+                    @endforeach
+
                 </ul>
             </div>
         </div>
-        <label for="username">User Name</label>
-        <input v-model="newMessage.user" type="text" name="username">
-        <label for="message">Message</label>
-        <input v-model="newMessage.messageText" type="text" name="message">
-        <button v-on:click='addMessage()' class="z-depth-2 submit-button waves-effect waves-light red btn right" type="submit">Submit</button>
+        <br>
+        <form method="POST" action="/chat">
+            {{ csrf_field() }}
+            <label for="title">Title</label>
+            <input type="text" name="title" autofocus>
+            <label for="content">Content</label>
+            <input type="text" name="content">
+            <button type="submit" class="btn red">Submit</button>
+        </form>
     </div>
 </div>
 
@@ -29,30 +45,5 @@
 
 @section('messagesScript')
 
-<script>
-
-var a = new Vue({
-   el: '#app',
-   data: {
-       newMessage: [
-           {
-               user: "",
-               messageText: "",
-           }
-       ],
-   },
-   methods: {
-       addMessage: function () {
-           var user = this.user;
-           var messageText = this.messageText;
-           this.newMessage.push(user);
-           this.newMessage.push(messageText);
-           user = "";
-           messageText = "";
-
-       }
-   } 
-});
-</script>
 
 @endsection
