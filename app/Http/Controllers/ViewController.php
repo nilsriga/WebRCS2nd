@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
+
+use App\User;
 use App\Message;
 
 class ViewController extends Controller
@@ -29,15 +33,30 @@ class ViewController extends Controller
     }    
     
     public function chat() {
-        $messages = Message::orderBy('id', 'DESC')->get();;
 
+        $messages = Message::all();
+
+        foreach ($messages as $message) {
+            $message->user->name;
+        }
+
+        $messages = Message::orderBy('id', 'DESC')->get();
+  
+        // dd($messages->owner_id);
+        
         return view('galaDarbsRCS.chat', compact('messages'));
     }    
 
     public function chatStore() {
 
-        Message::create(request(['title', 'content', 'created_at']));
+        $message = new Message();
 
+        $message->title = request('title');
+        $message->content = request('content');
+        $message->owner_id = auth()->id();
+
+        $message->save();
+   
         return back();
     }
 
@@ -55,7 +74,21 @@ class ViewController extends Controller
     
     public function calculator() {
         return view('galaDarbsRCS/calculator');
-    }    
+    } 
+    
+    public function userData() {
+
+        if (Auth::check())
+        {
+            return view('galaDarbsRCS/userData');
+        }
+
+        // Show the page
+        abort(404);
+
+        // abort_unless(Auth::check(), 403);
+        // return view('galaDarbsRCS/userData');
+    }     
     // public function index() {
     //     $tasks = [
     //         "Go to the store",

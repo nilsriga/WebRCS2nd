@@ -12,23 +12,22 @@
         <div class="chat-window">
             <div class="messages" style="overflow-y: scroll; height:500px" >
                 <ul>
-
                     @foreach($messages as $message)
 
-                    <li><h5>{{$message->title}}</h5></li>
+                    <li><h6>{{$message->user->name}} writes: {{$message->title}}</h6></li>
                     <ul>
                         <li><h6>{{$message->content}}</h6></li>
-                        {{-- <li>{{$message->$created_at}}</li> --}}
-                        <li><p>{{$message->created_at}}</p></li>
+                        <li><p>{{$message->created_at->diffForHumans()}}</p></li>
                     </ul>
                     <div class="divider"></div>
-
 
                     @endforeach
 
                 </ul>
             </div>
         </div>
+
+        @if(auth()->check())
         <br>
         <form method="POST" action="/chat">
             {{ csrf_field() }}
@@ -38,6 +37,8 @@
             <input type="text" name="content">
             <button type="submit" class="btn red">Submit</button>
         </form>
+        @endif
+
     </div>
 </div>
 

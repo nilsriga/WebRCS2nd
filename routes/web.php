@@ -22,6 +22,7 @@ Route::get('/register', 'ViewController@register');
 Route::get('/aboutUs', 'ViewController@aboutUs');
 Route::get('/clicker', 'ViewController@clicker');
 Route::get('/calculator', 'ViewController@calculator');
+Route::get('/userData', 'ViewController@userData')  ;
 
 
 // Route::post('/create', 'MessageController@create');
@@ -73,6 +74,7 @@ Route::get('/calculator', 'ViewController@calculator');
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
@@ -86,4 +88,3 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('/home', 'HomeController@index')->name('home');
-
